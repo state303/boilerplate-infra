@@ -7,7 +7,11 @@
 ### Memo
 
 - Check .env.example for your use-case.
-- Checkout submodules and use the ./
+- Checkout submodules
+- Or fuck it all and use
+  - prepare.sh for deploy
+  - update.sh for update
+- check .conf directory for configurations
 
 ```sh
 
