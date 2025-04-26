@@ -1,0 +1,3 @@
+[submodule "proxies/haproxy/source"]
+	path = proxies/haproxy/source
+	url = git@github.com:docker-library/haproxy.git
