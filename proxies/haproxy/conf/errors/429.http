@@ -1,0 +1,9 @@
+HTTP/1.0 400 Too Many Requests
+Cache-Control: no-cache
+Connection: close
+Content-Type: text/html
+
+{
+    "message": "Too Many Requests"
+}
+

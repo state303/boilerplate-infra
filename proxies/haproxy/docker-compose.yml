@@ -1,0 +1,20 @@
+# HAProxy
+
+services:
+  haproxy:
+    image: "haproxy:${HAPROXY_VERSION}"
+    build: 
+      context: "./source/${HAPROXY_VERSION}"
+      network: host
+    container_name: haproxy
+    
+    # just saying: do not mount the file directly.
+    # instead, mount it via directory.
+    # by doing so, we can reload the config with just a few ms...
+    # see: https://hub.docker.com/_/haproxy/ 
+    volumes:
+      - ./conf:/usr/local/etc/haproxy:ro
+    env_file:
+      - path: "./.env"
+        required: true
+    network_mode: host
